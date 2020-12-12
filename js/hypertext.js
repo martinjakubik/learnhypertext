@@ -16,20 +16,21 @@ const createButton = function (sId, sLabel, oParent) {
 
 };
 
-const createCanvas = function (sCanvasId, nZindex, oParent) {
+const createCanvas = function (sCanvasId, sClasses, nZindex = 0, oParent = document.body, nHeight) {
 
-    if (!oParent) {
-        oParent = document.body;
+    if (sCanvasId && (!sClasses || sClasses.length < 1)) {
+        sClasses = sCanvasId;
     }
 
     const oCanvas = document.createElement('canvas');
     oCanvas.id = sCanvasId;
+    oCanvas.classList.add(sClasses);
     oParent.appendChild(oCanvas);
 
     const nParentWidth = oCanvas.parentNode.clientWidth;
 
     oCanvas.width = nParentWidth;
-    oCanvas.height = CANVAS_HEIGHT;
+    oCanvas.height = nHeight;
 
     oCanvas.style.position = 'absolute';
     oCanvas.style.zindex = nZindex;
