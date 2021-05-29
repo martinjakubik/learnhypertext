@@ -1,6 +1,6 @@
 {
   "name": "learnhypertext",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "lets you make and control HTML documents with a focus on readability of the code rather than performance",
   "main": "js/index.js",
   "type": "module",
