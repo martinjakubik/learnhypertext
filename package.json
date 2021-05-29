@@ -1,0 +1,26 @@
+{
+  "name": "learnhypertext",
+  "version": "1.0.0",
+  "description": "lets you make and control HTML documents with a focus on readability of the code rather than performance",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinjakubik/learnhypertext.git"
+  },
+  "keywords": [
+    "learn",
+    "hypertext",
+    "HTML",
+    "web",
+    "pages"
+  ],
+  "author": "martin jakubik",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/martinjakubik/learnhypertext/issues"
+  },
+  "homepage": "https://github.com/martinjakubik/learnhypertext#readme"
+}
