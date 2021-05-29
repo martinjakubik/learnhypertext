@@ -64,6 +64,21 @@ const createCheckbox = function (sId, bValue, sLabel, oParent) {
 
 };
 
+const createDiv = function (sId, oParent) {
+
+    if (!oParent) {
+        oParent = document.body;
+    }
+
+    const oDiv = document.createElement('div');
+    oDiv.id = sId;
+
+    oParent.appendChild(oDiv);
+
+    return oDiv;
+
+};
+
 const createNumberInput = function (sId, nValue, sLabel, oParent) {
 
     if (!oParent) {
@@ -124,4 +139,8 @@ const setBlockVisibility = function (bVisible)  {
 
 };
 
-export { CANVAS_HEIGHT, createButton, createCanvas, createCheckbox, createNumberInput, createSlider, setBlockVisibility };
+const getStyles = function (oElement, oPseudoElement) {
+    return window.getComputedStyle(oElement, oPseudoElement);
+};
+
+export { CANVAS_HEIGHT, createButton, createCanvas, createCheckbox, createDiv, createNumberInput, createSlider, setBlockVisibility, getStyles };
