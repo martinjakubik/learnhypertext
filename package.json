@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "lets you make and control HTML documents with a focus on readability of the code rather than performance",
   "main": "js/index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
