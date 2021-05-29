@@ -101,6 +101,27 @@ const createNumberInput = function (sId, nValue, sLabel, oParent) {
 
 };
 
+const createTextInput = function (sId, sValue, sLabel, oParent) {
+
+    if (!oParent) {
+        oParent = document.body;
+    }
+
+    const oInput = document.createElement('input');
+    oInput.id = sId;
+    oInput.value = sValue;
+
+    const oLabel = document.createElement('label');
+    oLabel.for = sId;
+    oLabel.innerText = sLabel;
+
+    oParent.appendChild(oLabel);
+    oParent.appendChild(oInput);
+
+    return oInput;
+
+};
+
 const createSlider = function (sId, sMin, sMax, nValue, sLabel, nStep, oParent) {
 
     if (!oParent) {
@@ -143,4 +164,4 @@ const getStyles = function (oElement, oPseudoElement) {
     return window.getComputedStyle(oElement, oPseudoElement);
 };
 
-export { CANVAS_HEIGHT, createButton, createCanvas, createCheckbox, createDiv, createNumberInput, createSlider, setBlockVisibility, getStyles };
+export { CANVAS_HEIGHT, createButton, createCanvas, createCheckbox, createDiv, createNumberInput, createTextInput, createSlider, setBlockVisibility, getStyles };
