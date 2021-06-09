@@ -1,6 +1,6 @@
 # learnhypertext
 
-learnhypertext lets you make and move HTML documents with a focus on readability of the code rather than performance or indeed usability
+learnhypertext lets you make HTML documents with a focus on readability of the code rather than performance
 
 priorities of learnhypertext code:
 1) it works, and you can use it to make web pages (HTML documents)
