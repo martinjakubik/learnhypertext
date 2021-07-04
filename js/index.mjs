@@ -30,7 +30,7 @@ const createCanvas = function (sCanvasId, sClasses, nZindex = 0, oParent = docum
     const nParentWidth = oCanvas.parentNode.clientWidth;
 
     oCanvas.width = nWidth ? nWidth : nParentWidth;
-    oCanvas.height = nHeight ? nHeight : nWidth;
+    oCanvas.height = nHeight ? nHeight : oCanvas.width;
 
     oCanvas.style.position = 'absolute';
     oCanvas.style.zindex = nZindex;
