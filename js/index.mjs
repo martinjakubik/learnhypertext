@@ -53,6 +53,7 @@ const createCheckbox = function (sId, bValue, sLabel, oParent) {
     oInput.id = sId;
     oInput.name = sName;
     oInput.value = bValue;
+    oInput.checked = bValue === true;
 
     const oLabel = document.createElement('label');
     oLabel.for = sId;
