@@ -81,7 +81,7 @@ const createDiv = function (sId, oParent) {
 
 };
 
-const createParagraph = function (sId, oParent) {
+const createParagraph = function (sId, sValue, oParent) {
 
     if (!oParent) {
         oParent = document.body;
@@ -91,6 +91,11 @@ const createParagraph = function (sId, oParent) {
     oParagraph.id = sId;
 
     oParent.appendChild(oParagraph);
+
+    if (sValue && sValue.length > 0) {
+        const oText = document.createTextNode(sValue);
+        oParagraph.appendChild(oText);
+    }
 
     return oParagraph;
 
