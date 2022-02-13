@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/martinjakubik/learnhypertext/issues"
   },
-  "homepage": "https://github.com/martinjakubik/learnhypertext#readme"
+  "homepage": "https://github.com/martinjakubik/learnhypertext#readme",
+  "devDependencies": {
+    "eslint": "^8.9.0"
+  }
 }
