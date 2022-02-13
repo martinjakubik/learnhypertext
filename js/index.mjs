@@ -81,6 +81,21 @@ const createDiv = function (sId, oParent) {
 
 };
 
+const createParagraph = function (sId, oParent) {
+
+    if (!oParent) {
+        oParent = document.body;
+    }
+
+    const oParagraph = document.createElement('p');
+    oParagraph.id = sId;
+
+    oParent.appendChild(oParagraph);
+
+    return oParagraph;
+
+};
+
 const createNumberInput = function (sId, nValue, sLabel, oParent) {
 
     if (!oParent) {
@@ -190,4 +205,4 @@ const getStyles = function (oElement, oPseudoElement) {
     return window.getComputedStyle(oElement, oPseudoElement);
 };
 
-export { CANVAS_HEIGHT, createButton, createCanvas, createCheckbox, createDiv, createNumberInput, createTextInput, createSlider, createFileInput, setBlockVisibility, getStyles };
+export { CANVAS_HEIGHT, createButton, createCanvas, createCheckbox, createDiv, createParagraph, createNumberInput, createTextInput, createSlider, createFileInput, setBlockVisibility, getStyles };
