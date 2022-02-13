@@ -154,6 +154,30 @@ const createSlider = function (sId, sMin, sMax, nValue, sLabel, nStep, oParent) 
 
 };
 
+const createFileInput = function (sId, sLabel, oParent, sAccept) {
+
+    if (!oParent) {
+        oParent = document.body;
+    }
+
+    const oInput = document.createElement('input');
+    oInput.type = 'file';
+    oInput.id = sId;
+    if (sAccept && sAccept.length > 0) {
+        oInput.accept = sAccept;
+    }
+
+    const oLabel = document.createElement('label');
+    oLabel.for = sId;
+    oLabel.innerText = sLabel;
+
+    oParent.appendChild(oLabel);
+    oParent.appendChild(oInput);
+
+    return oInput;
+
+};
+
 const setBlockVisibility = function (bVisible)  {
 
     let sStyle = 'position: absolute';
@@ -166,4 +190,4 @@ const getStyles = function (oElement, oPseudoElement) {
     return window.getComputedStyle(oElement, oPseudoElement);
 };
 
-export { CANVAS_HEIGHT, createButton, createCanvas, createCheckbox, createDiv, createNumberInput, createTextInput, createSlider, setBlockVisibility, getStyles };
+export { CANVAS_HEIGHT, createButton, createCanvas, createCheckbox, createDiv, createNumberInput, createTextInput, createSlider, createFileInput, setBlockVisibility, getStyles };
