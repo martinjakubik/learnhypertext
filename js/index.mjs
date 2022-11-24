@@ -16,7 +16,7 @@ const createButton = function (sId, sLabel, oParent) {
         oParent.appendChild(oLabel);
     }
 
-    oParent.appendChild(oInput);
+    oParent.appendChild(oButton);
 
     return oButton;
 };
