@@ -1,7 +1,6 @@
 const CANVAS_HEIGHT = 600;
 
 const createButton = function (sId, sLabel, oParent) {
-
     if (!oParent) {
         oParent = document.body;
     }
@@ -13,11 +12,9 @@ const createButton = function (sId, sLabel, oParent) {
     oParent.appendChild(oButton);
 
     return oButton;
-
 };
 
 const createCanvas = function (sCanvasId, sClasses, nZindex = 0, oParent = document.body, nWidth, nHeight) {
-
     if (sCanvasId && (!sClasses || sClasses.length < 1)) {
         sClasses = sCanvasId;
     }
@@ -37,11 +34,9 @@ const createCanvas = function (sCanvasId, sClasses, nZindex = 0, oParent = docum
     oCanvas.style.zindex = nZindex;
 
     return oCanvas;
-
 };
 
 const createCheckbox = function (sId, bValue, sLabel, oParent) {
-
     if (!oParent) {
         oParent = document.body;
     }
@@ -63,11 +58,9 @@ const createCheckbox = function (sId, bValue, sLabel, oParent) {
     oParent.appendChild(oInput);
 
     return oInput;
-
 };
 
 const createDiv = function (sId, oParent) {
-
     if (!oParent) {
         oParent = document.body;
     }
@@ -78,11 +71,9 @@ const createDiv = function (sId, oParent) {
     oParent.appendChild(oDiv);
 
     return oDiv;
-
 };
 
 const createParagraph = function (sId, sValue, oParent) {
-
     if (!oParent) {
         oParent = document.body;
     }
@@ -98,11 +89,9 @@ const createParagraph = function (sId, sValue, oParent) {
     }
 
     return oParagraph;
-
 };
 
 const createNumberInput = function (sId, nValue, sLabel, oParent) {
-
     if (!oParent) {
         oParent = document.body;
     }
@@ -120,11 +109,9 @@ const createNumberInput = function (sId, nValue, sLabel, oParent) {
     oParent.appendChild(oInput);
 
     return oInput;
-
 };
 
 const createTextInput = function (sId, sValue, sLabel, oParent) {
-
     if (!oParent) {
         oParent = document.body;
     }
@@ -143,11 +130,9 @@ const createTextInput = function (sId, sValue, sLabel, oParent) {
     oParent.appendChild(oInput);
 
     return oInput;
-
 };
 
 const createSlider = function (sId, sMin, sMax, nValue, sLabel, nStep, oParent) {
-
     if (!oParent) {
         oParent = document.body;
     }
@@ -173,11 +158,9 @@ const createSlider = function (sId, sMin, sMax, nValue, sLabel, nStep, oParent) 
     oParent.appendChild(oInput);
 
     return oInput;
-
 };
 
 const createFileInput = function (sId, sValue, sLabel, oParent, sAccept) {
-
     if (!oParent) {
         oParent = document.body;
     }
@@ -198,15 +181,12 @@ const createFileInput = function (sId, sValue, sLabel, oParent, sAccept) {
     oParent.appendChild(oInput);
 
     return oInput;
-
 };
 
 const setBlockVisibility = function (bVisible)  {
-
     let sStyle = 'position: absolute';
     sStyle += bVisible ? '; display: block' : '; display: none';
     return sStyle;
-
 };
 
 const getStyles = function (oElement, oPseudoElement) {
