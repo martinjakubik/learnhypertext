@@ -133,11 +133,13 @@ const createTextInput = function (sId, sValue, sLabel, oParent) {
     oInput.id = sId;
     oInput.value = sValue;
 
-    const oLabel = document.createElement('label');
-    oLabel.for = sId;
-    oLabel.innerText = sLabel;
+    if (sLabel) {
+        const oLabel = document.createElement('label');
+        oLabel.for = sId;
+        oLabel.innerText = sLabel;
+        oParent.appendChild(oLabel);
+    }
 
-    oParent.appendChild(oLabel);
     oParent.appendChild(oInput);
 
     return oInput;
