@@ -176,7 +176,7 @@ const createSlider = function (sId, sMin, sMax, nValue, sLabel, nStep, oParent) 
 
 };
 
-const createFileInput = function (sId, sLabel, oParent, sAccept) {
+const createFileInput = function (sId, sValue, sLabel, oParent, sAccept) {
 
     if (!oParent) {
         oParent = document.body;
@@ -185,6 +185,7 @@ const createFileInput = function (sId, sLabel, oParent, sAccept) {
     const oInput = document.createElement('input');
     oInput.type = 'file';
     oInput.id = sId;
+    oInput.value = sValue;
     if (sAccept && sAccept.length > 0) {
         oInput.accept = sAccept;
     }
