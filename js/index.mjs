@@ -9,7 +9,14 @@ const createButton = function (sId, sLabel, oParent) {
     oButton.id = sId;
     oButton.innerText = sLabel;
 
-    oParent.appendChild(oButton);
+    if (sLabel) {
+        const oLabel = document.createElement('label');
+        oLabel.for = sId;
+        oLabel.innerText = sLabel;
+        oParent.appendChild(oLabel);
+    }
+
+    oParent.appendChild(oInput);
 
     return oButton;
 };
@@ -50,11 +57,13 @@ const createCheckbox = function (sId, bValue, sLabel, oParent) {
     oInput.value = bValue;
     oInput.checked = bValue === true;
 
-    const oLabel = document.createElement('label');
-    oLabel.for = sId;
-    oLabel.innerText = sLabel;
+    if (sLabel) {
+        const oLabel = document.createElement('label');
+        oLabel.for = sId;
+        oLabel.innerText = sLabel;
+        oParent.appendChild(oLabel);
+    }
 
-    oParent.appendChild(oLabel);
     oParent.appendChild(oInput);
 
     return oInput;
@@ -101,11 +110,13 @@ const createNumberInput = function (sId, nValue, sLabel, oParent) {
     oInput.id = sId;
     oInput.value = nValue;
 
-    const oLabel = document.createElement('label');
-    oLabel.for = sId;
-    oLabel.innerText = sLabel;
+    if (sLabel) {
+        const oLabel = document.createElement('label');
+        oLabel.for = sId;
+        oLabel.innerText = sLabel;
+        oParent.appendChild(oLabel);
+    }
 
-    oParent.appendChild(oLabel);
     oParent.appendChild(oInput);
 
     return oInput;
@@ -150,11 +161,13 @@ const createSlider = function (sId, sMin, sMax, nValue, sLabel, nStep, oParent) 
         oInput.step = nStep;
     }
 
-    const oLabel = document.createElement('label');
-    oLabel.for = sId;
-    oLabel.innerText = sLabel;
+    if (sLabel) {
+        const oLabel = document.createElement('label');
+        oLabel.for = sId;
+        oLabel.innerText = sLabel;
+        oParent.appendChild(oLabel);
+    }
 
-    oParent.appendChild(oLabel);
     oParent.appendChild(oInput);
 
     return oInput;
@@ -173,11 +186,13 @@ const createFileInput = function (sId, sValue, sLabel, oParent, sAccept) {
         oInput.accept = sAccept;
     }
 
-    const oLabel = document.createElement('label');
-    oLabel.for = sId;
-    oLabel.innerText = sLabel;
+    if (sLabel) {
+        const oLabel = document.createElement('label');
+        oLabel.for = sId;
+        oLabel.innerText = sLabel;
+        oParent.appendChild(oLabel);
+    }
 
-    oParent.appendChild(oLabel);
     oParent.appendChild(oInput);
 
     return oInput;
