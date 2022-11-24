@@ -5,6 +5,7 @@
   "main": "js/index.mjs",
   "type": "module",
   "scripts": {
+    "build": "./node_modules/.bin/babel js --out-dir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
