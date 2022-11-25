@@ -5,7 +5,7 @@
   "main": "js/index.mjs",
   "type": "module",
   "scripts": {
-    "build": "./node_modules/.bin/babel js --out-dir dist",
+    "build": "./build.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -30,5 +30,9 @@
     "@babel/core": "^7.20.2",
     "@babel/plugin-transform-modules-umd": "^7.18.6",
     "eslint": "^8.9.0"
+  },
+  "exports": {
+    "require": "./dist/index.js",
+    "import": "./dist/index.mjs"
   }
 }
