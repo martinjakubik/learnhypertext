@@ -9,13 +9,6 @@ const createButton = function (sId, sLabel, oParent) {
     oButton.id = sId;
     oButton.innerText = sLabel;
 
-    if (sLabel) {
-        const oLabel = document.createElement('label');
-        oLabel.for = sId;
-        oLabel.innerText = sLabel;
-        oParent.appendChild(oLabel);
-    }
-
     oParent.appendChild(oButton);
 
     return oButton;
