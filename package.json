@@ -1,6 +1,6 @@
 {
   "name": "learnhypertext",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "lets you make and control HTML documents with a focus on readability of the code rather than performance",
   "main": "js/index.mjs",
   "type": "module",
@@ -31,7 +31,9 @@
     "@babel/plugin-transform-modules-umd": "^7.18.6",
     "eslint": "^8.9.0"
   },
-  "files": ["dist/*"],
+  "files": [
+    "dist/*"
+  ],
   "exports": {
     "require": "./dist/index.js",
     "import": "./dist/index.mjs"
