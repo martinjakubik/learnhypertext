@@ -191,7 +191,7 @@ const createFileInput = function (sId, sValue, sLabel, oParent, sAccept) {
     return oInput;
 };
 
-const setBlockVisibility = function (bVisible)  {
+const setBlockVisibility = function (bVisible) {
     let sStyle = 'position: absolute';
     sStyle += bVisible ? '; display: block' : '; display: none';
     return sStyle;
