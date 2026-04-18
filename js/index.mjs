@@ -21,6 +21,7 @@ const createCanvas = function (
     oParent = document.body,
     nWidth,
     nHeight,
+    sPosition = 'absolute',
 ) {
     if (sCanvasId && (!sClasses || sClasses.length < 1)) {
         sClasses = sCanvasId;
@@ -37,7 +38,7 @@ const createCanvas = function (
     oCanvas.width = nWidth ? nWidth : nParentWidth;
     oCanvas.height = nHeight ? nHeight : nParentHeight;
 
-    oCanvas.style.position = 'absolute';
+    oCanvas.style.position = sPosition === 'relative' ? 'relative' : 'absolute';
     oCanvas.style.zindex = nZindex;
 
     return oCanvas;
