@@ -1,5 +1,20 @@
 const CANVAS_HEIGHT = 600;
 
+const createAnchor = function (sId, sText, sHypertextReference, oParent) {
+    if (!oParent) {
+        oParent = document.body;
+    }
+
+    const oAnchor = document.createElement('a');
+    oAnchor.id = sId;
+    oAnchor.innerText = sText;
+    oAnchor.href = sHypertextReference;
+
+    oParent.appendChild(oAnchor);
+
+    return oAnchor;
+};
+
 const createButton = function (sId, sLabel, oParent) {
     if (!oParent) {
         oParent = document.body;
@@ -232,6 +247,7 @@ const getStyles = function (oElement, oPseudoElement) {
 
 export {
     CANVAS_HEIGHT,
+    createAnchor,
     createButton,
     createCanvas,
     createCheckbox,
