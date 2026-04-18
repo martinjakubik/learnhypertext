@@ -83,7 +83,7 @@ const createDiv = function (sId, oParent) {
     return oDiv;
 };
 
-const createImg = function (sId, oParent) {
+const createImage = function (sId, oParent) {
     if (!oParent) {
         oParent = document.body;
     }
@@ -236,7 +236,7 @@ export {
     createCanvas,
     createCheckbox,
     createDiv,
-    createImg,
+    createImage,
     createParagraph,
     createNumberInput,
     createTextInput,
