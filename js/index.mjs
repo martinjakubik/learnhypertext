@@ -14,7 +14,14 @@ const createButton = function (sId, sLabel, oParent) {
     return oButton;
 };
 
-const createCanvas = function (sCanvasId, sClasses, nZindex = 0, oParent = document.body, nWidth, nHeight) {
+const createCanvas = function (
+    sCanvasId,
+    sClasses,
+    nZindex = 0,
+    oParent = document.body,
+    nWidth,
+    nHeight,
+) {
     if (sCanvasId && (!sClasses || sClasses.length < 1)) {
         sClasses = sCanvasId;
     }
@@ -73,6 +80,19 @@ const createDiv = function (sId, oParent) {
     oParent.appendChild(oDiv);
 
     return oDiv;
+};
+
+const createImg = function (sId, oParent) {
+    if (!oParent) {
+        oParent = document.body;
+    }
+
+    const oImg = document.createElement('img');
+    oImg.id = sId;
+
+    oParent.appendChild(oImg);
+
+    return oImg;
 };
 
 const createParagraph = function (sId, sValue, oParent) {
@@ -136,7 +156,15 @@ const createTextInput = function (sId, sValue, sLabel, oParent) {
     return oInput;
 };
 
-const createSlider = function (sId, sMin, sMax, nValue, sLabel, nStep, oParent) {
+const createSlider = function (
+    sId,
+    sMin,
+    sMax,
+    nValue,
+    sLabel,
+    nStep,
+    oParent,
+) {
     if (!oParent) {
         oParent = document.body;
     }
@@ -201,4 +229,18 @@ const getStyles = function (oElement, oPseudoElement) {
     return window.getComputedStyle(oElement, oPseudoElement);
 };
 
-export { CANVAS_HEIGHT, createButton, createCanvas, createCheckbox, createDiv, createParagraph, createNumberInput, createTextInput, createSlider, createFileInput, setBlockVisibility, getStyles };
+export {
+    CANVAS_HEIGHT,
+    createButton,
+    createCanvas,
+    createCheckbox,
+    createDiv,
+    createImg,
+    createParagraph,
+    createNumberInput,
+    createTextInput,
+    createSlider,
+    createFileInput,
+    setBlockVisibility,
+    getStyles,
+};
