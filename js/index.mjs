@@ -151,6 +151,34 @@ const createNumberInput = function (sId, nValue, sLabel, oParent) {
     return oInput;
 };
 
+const createSvg = function (sId, oParent) {
+    if (!oParent) {
+        oParent = document.body;
+    }
+
+    const oSVG = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    oSVG.id = sId;
+    oSVG.setAttribute('viewBox', '0 0 100 100');
+    oParent.appendChild(oSVG);
+
+    return oSVG;
+};
+
+const createSvgPath = function (sId, oParent) {
+    if (!oParent) {
+        oParent = document.body;
+    }
+
+    const oSvgPath = document.createElementNS(
+        'http://www.w3.org/2000/svg',
+        'path',
+    );
+    oSvgPath.id = sId;
+    oParent.appendChild(oSvgPath);
+
+    return oSvgPath;
+};
+
 const createTextInput = function (sId, sValue, sLabel, oParent) {
     if (!oParent) {
         oParent = document.body;
@@ -255,6 +283,8 @@ export {
     createImage,
     createParagraph,
     createNumberInput,
+    createSvg,
+    createSvgPath,
     createTextInput,
     createSlider,
     createFileInput,
